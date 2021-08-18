@@ -19,23 +19,91 @@ class _XylophoneAppState extends State<XylophoneApp> {
           appBar: AppBar(
             backgroundColor: Colors.teal,
             title: Text(
-              "The Chainsmokers",
+              "My Mix",
               style: TextStyle(
                 color: Colors.white,
               ),
             ),
             centerTitle: true,
           ),
-          body: Center(
-            child: ElevatedButton(
-              onPressed: () {
-                player.play(
-                  'note2.wav',
-                );
-              },
-              child: Text(
-                "Click Here",
-              ),
+          body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: Column(
+              children: [
+                Container(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith(
+                        (states) => Colors.red,
+                      ),
+                    ),
+                    onPressed: () {
+                      player.play(
+                        'All_we_know.mp3',
+                      );
+                    },
+                    child: Text(
+                      "All We Know",
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      player.play(
+                        'closer.mp3',
+                      );
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith(
+                        (states) => Colors.green,
+                      ),
+                    ),
+                    child: Text(
+                      "Closer",
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      player.play(
+                        'Eastside.mp3',
+                      );
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith(
+                        (states) => Colors.blue,
+                      ),
+                    ),
+                    child: Text(
+                      "EastSide",
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      player.play(
+                        'paris.mp3',
+                      );
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith(
+                        (states) => Colors.black,
+                      ),
+                    ),
+                    child: Text(
+                      "Paris",
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
